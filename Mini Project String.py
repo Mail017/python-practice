@@ -1,0 +1,10 @@
+## เขียนโปรแกรมที่รับข้อความแล้ววิเคราะห์ครบทุกอย่าง
+word = input("ใส่ข้อความ: ")
+print("=== ผลการวิเคราะห์ ===")
+print(f"ข้อความต้นฉบับ:: {word}")
+print(f"จำนวนตัวอักษรทั้งหมด: {len(word.replace(' ', ''))}")
+print(f"จำนวนคำทั้งหมด: {len(word.split())}")
+print(f"จำนวนสระ:{sum(1 for char in word if char.lower() in 'aeiou')}")
+print(f"คำที่ยาวที่สุด: {max(word.split(), key=len)}")
+print(f"ตัวใหญ่: {word.upper()}")
+print(f"กลับคำ: {word[::-1]}")
